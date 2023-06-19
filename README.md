@@ -7,6 +7,4 @@ Alumnas:
 - Camila Sobrino
 - Guadalupe Varela
 
-Para ejecutar el trabajo se requiere correr `maestro.sh`.
-
-Hola esto es una prueba
+Para ejecutar el trabajo se requiere descargar los archivos `exn.sh`, `exn.py`, `maestro.sh` y muscle. Luego se debe correr `maestro.sh`.
