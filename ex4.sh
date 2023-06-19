@@ -12,8 +12,8 @@ cd Ejercicio1
 mv NM_014244-4.fas ..
 cd ..
 
-vi ex5out.txt
+vi ex4out.txt
 
-mkdir Ejercicio5
-python3 ex5.py prosite.dat NM_014244-4.fas ex5out.txt
-mv ex5out.txt Ejercicio5
+mkdir Ejercicio4
+python3 ex4.py prosite.dat NM_014244-4.fas ex4out.txt
+mv ex4out.txt Ejercicio4
