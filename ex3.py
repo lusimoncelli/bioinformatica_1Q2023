@@ -21,9 +21,8 @@ top_seqs = []
 for i in range(11):
 	top_seqs += [SeqRecord(Seq(seqs[i]), id= str(i))]
 	
-print(len(top_seqs))
 
 SeqIO.write(top_seqs, "Secuencias.fasta", "fasta")
 
-os.system("/home/ITBADC/guvarela/Documentos/muscle5.1.linux_intel64 -align Secuencias.fasta -output Ejercicio3/MSA.fasta")
+os.system(path + "/muscle5.1.linux_intel64 -align Secuencias.fasta -output MSA.fasta")
 

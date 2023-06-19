@@ -2,7 +2,7 @@
 
 if pidof -x $0 -o $$; then
   echo "Process already running"
-  exit 8
+  exit 10
 else 
 	echo 'Empiezo'
 fi
@@ -14,7 +14,7 @@ mkdir Ejercicio2
 
 touch blast.out
 
-if [ls ex2.py | wc -l]; then
+if [ -f "ex2.py" ]; then
 	echo "Ejecuto el .py"
 	python3 ex2.py $path blast.out
 

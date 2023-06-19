@@ -1,16 +1,15 @@
 #!/bin/bash
 
-date=$(date+'%Y%m%d')
-filename="${date}.log"
-touch "$filename$"
+filename="$(date +'%Y%m%d').log"
+touch "$filename"
 
 if pidof -x $0 -o $$; then
-  echo "Process already running"
-  exit 1
+  echo "Process already running" >>"$filename"
+  exit 10
 else 
 	echo 'Empiezo'
 fi
-$
+
 mkdir genes
 cd genes
 
@@ -24,39 +23,39 @@ cd ..
 
 #Ejercicio 1
 if [ -f "ex1.sh" ]; then
-	echo "Ejecuto el ejercicio 1" >> "$filename$"
+	echo "Ejecuto el ejercicio 1" >> "$filename"
 	
 	chmod 777 ex1.sh
 	source ex1.sh
 
-	echo "Termino el ejercicio 1" >> "$filename$"
+	echo "Termino el ejercicio 1" >> "$filename"
 else
-	echo "Falta el archivo ex1.sh" >> "$filename$"
+	echo "Falta el archivo ex1.sh" >> "$filename"
 	exit 2001
-fi
+fi >> "$filename"
 
 #Ejercicio 2
 if [ -f "ex2.sh" ]; then
-	echo "Ejecuto el ejercicio 2" >> "$filename$"
+	echo "Ejecuto el ejercicio 2" >> "$filename"
 	
 	chmod 777 ex2.sh
 	source ex2.sh
 
-	echo "Termino el ejercicio 2" >> "$filename$"
+	echo "Termino el ejercicio 2" >> "$filename"
 else
-	echo "Falta el archivo ex2.sh" >> "$filename$"
+	echo "Falta el archivo ex2.sh" >> "$filename"
 	exit 2002
-fi
+fi >> "$filename"
 
 #Ejercicio 3
 if [ -f "ex3.sh" ]; then
-	echo "Ejecuto el ejercicio 3" >> "$filename$"
+	echo "Ejecuto el ejercicio 3" >> "$filename"
 	
 	chmod 777 ex3.sh
 	source ex3.sh
 
-	echo "Termino el ejercicio 3" >> "$filename$"
+	echo "Termino el ejercicio 3" >> "$filename"
 else
-	echo "Falta el archivo ex3.sh" >> "$filename$"
+	echo "Falta el archivo ex3.sh" >> "$filename"
 	exit 2003
-fi
+fi >> "$filename"

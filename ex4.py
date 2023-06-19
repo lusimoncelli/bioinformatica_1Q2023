@@ -10,9 +10,9 @@ file = sys.argv[2]
 out = sys.argv[3]
 
 
-os.system("transeq -sequence " + file + " -outseq Ejercicio5/transeq.txt")
+os.system("transeq -sequence " + file + " -outseq Ejercicio4/transeq.txt")
 
-os.system("patmatmotifs -sequence Ejercicio5/transeq.txt -outfile out -full -auto")
+os.system("patmatmotifs -sequence Ejercicio4/transeq.txt -outfile out -full -auto")
 
 
 

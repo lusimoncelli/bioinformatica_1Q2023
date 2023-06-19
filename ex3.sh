@@ -7,18 +7,17 @@ else
 	echo 'Empiezo'
 fi
 
-cd Ejercicio2
 path=$(pwd)
-cd ..
 mkdir Ejercicio3
 
-if [ls ex3.py | wc -l && ls muscle5.1.linux_intel64 | wc -l]; then
+if [[ -f "ex3.py" && -f "muscle5.1.linux_intel64" ]]; then
 	echo "Ejecuto el .py"
+	touch "MSA.fasta"
 	python3 ex3.py $path 
 	mv MSA.fasta Ejercicio3
 	echo "Termino el .py"
 else
 	echo "Falta el archivo ex3.py ó muscle"
 	exit 11
-fi
+fi 
 

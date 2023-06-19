@@ -2,7 +2,7 @@
 
 if pidof -x $0 -o $$; then
   echo "Process already running"
-  exit 6
+  exit 10
 else 
 	echo 'Empiezo'
 fi
@@ -13,7 +13,7 @@ mv ADAMTS2.gb ../Ejercicio1
 
 cd ..
 
-if [ls ex1.py | wc -l]; then
+if [ -f "ex1.py" ]; then
 	echo "Ejecuto el .py"
 	
 	chmod 777 ex1.py
@@ -24,6 +24,7 @@ if [ls ex1.py | wc -l]; then
 	
 	mv ex1.py ..
 	mv ADAMTS2.gb ../genes
+	cd ..
 
 	echo "Termino el .py"
 else
