@@ -7,4 +7,6 @@ Alumnas:
 - Camila Sobrino
 - Guadalupe Varela
 
-Para ejecutar el trabajo se requiere correr ´maestro.sh´.
+Para ejecutar el trabajo se requiere correr `maestro.sh`.
+
+Hola esto es una prueba
