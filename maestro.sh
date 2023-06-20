@@ -59,3 +59,16 @@ else
 	echo "Falta el archivo ex3.sh" >> "$filename"
 	exit 2003
 fi >> "$filename"
+
+# Ejercicio 4
+if [ -f "ex4.sh" ]; then
+	echo "Ejecuto el ejercicio 4" >> "$filename"
+	
+	chmod 777 ex4.sh
+	source ex4.sh
+
+	echo "Termino el ejercicio 4" >> "$filename"
+else
+	echo "Falta el archivo ex4.sh" >> "$filename"
+	exit 2004
+fi >> "$filename"

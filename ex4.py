@@ -6,13 +6,14 @@ if len(sys.argv) != 4:
     exit(1)
 
 prosite = sys.argv[1]
-file = sys.argv[2]
+gb = sys.argv[2]
 out = sys.argv[3]
 
+os.system("seqret -sequence "+ gb + " -outseq ADAMTS2.fasta")
 
-os.system("transeq -sequence " + file + " -outseq Ejercicio4/transeq.txt")
-
-os.system("patmatmotifs -sequence Ejercicio4/transeq.txt -outfile out -full -auto")
+os.system("transeq -sequence ADAMTS2.fasta -outseq output_protein.fasta")
+os.system("prosextract ./")
+os.system("patmatmotifs -sequence output_protein.fasta -outfile " + out +" -full -auto")
 
 
 

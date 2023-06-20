@@ -1,4 +1,5 @@
 import sys
+import subprocess
 from Bio import AlignIO
 from Bio.Align import MultipleSeqAlignment
 from Bio.Seq import Seq
@@ -9,6 +10,7 @@ import os
 
 seqs = []
 path = sys.argv[1]
+path2 = sys.argv[2]
 
 with open(path+'/blast.out', "r") as f:
     data = f.read()
@@ -24,5 +26,7 @@ for i in range(11):
 
 SeqIO.write(top_seqs, "Secuencias.fasta", "fasta")
 
-os.system(path + "/muscle5.1.linux_intel64 -align Secuencias.fasta -output MSA.fasta")
+command = "/muscle5.1.linux_intel64 -align Secuencias.fasta -output MSA.fasta"
+os.system(path2+command)
+
 
