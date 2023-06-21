@@ -26,7 +26,7 @@ resultado=NCBIWWW.qblast("blastp","nr",archivo_fasta)
 registro=NCBIXML.read(resultado)
 
 E_value= 0.05
-salida= "Alineamiento 0 \nQuery: %s\n\n" %seq
+salida= "Alineamiento 0 \nsbjct: %s\n\n" %seq
 i=1
 
 for alineamiento in registro.alignments:
