@@ -1,7 +1,4 @@
 import sys
-import subprocess
-from Bio import AlignIO
-from Bio.Align import MultipleSeqAlignment
 from Bio.Seq import Seq
 from Bio import SeqIO
 from Bio.SeqRecord import SeqRecord
