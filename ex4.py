@@ -7,7 +7,6 @@ if len(sys.argv) != 4:
 
 prosite = sys.argv[1]
 gb = sys.argv[2]
-out = sys.argv[3]
 
 os.system("seqret -sequence "+ gb + " -outseq ADAMTS2.fasta")
 
