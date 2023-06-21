@@ -14,7 +14,7 @@ path2 = sys.argv[2]
 
 with open(path+'/blast.out', "r") as f:
     data = f.read()
-    queries = data.split("Query: ")[1:]  # split the data by "Query" and discard the first element
+    queries = data.split("sbjct: ")[1:]  # split the data by "Query" and discard the first element
     
     for query in queries:
         seqs += [query.split("\n")[0]] # get the first line of each query
