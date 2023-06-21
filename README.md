@@ -12,6 +12,7 @@ Para ejecutar el trabajo se requiere descargar los archivos `exn.sh`, `exn.py`, 
 Para comenzar se deben ejecutar los siguientes comandos desde la terminal:
 
 \> su
+
 \> PROSEXTRACT
 
 Esto permite utilizar la función patmatmotif de EMBOSS, se requiere acceso al super usuario.
