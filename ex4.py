@@ -12,8 +12,6 @@ out = sys.argv[3]
 os.system("seqret -sequence "+ gb + " -outseq ADAMTS2.fasta")
 
 os.system("transeq -sequence ADAMTS2.fasta -outseq output_protein.fasta")
-os.system("prosextract ./")
-os.system("patmatmotifs -sequence output_protein.fasta -outfile " + out +" -full -auto")
 
 
 

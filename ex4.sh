@@ -18,6 +18,7 @@ mkdir Ejercicio4
 
 if [[ -f "ex4.py" && -f "prosite.dat" ]]; then
 	python3 ex4.py prosite.dat ADAMTS2.gb ex4out.txt
+	patmatmotifs output_protein.fasta -outfile ex4out.txt
 	mv ADAMTS2.fasta Ejercicio4
 	mv output_protein.fasta Ejercicio4
 	mv ex4out.txt Ejercicio4
